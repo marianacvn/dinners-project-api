@@ -18,8 +18,8 @@ class Mesa(models.Model):
 
 
 class Pedido(models.Model):
-    mesa = models.OneToOneField(Mesa, on_delete=models.SET_NULL, null=True)
-    cliente = models.OneToOneField(Cliente, on_delete=models.SET_NULL, null=True)
+    mesa = models.ForeignKey(Mesa, on_delete=models.SET_NULL, null=True)
+    cliente = models.ForeignKey(Cliente, on_delete=models.SET_NULL, null=True)
     produto = models.ManyToManyField(Produto)
 
     def get_produtos(self):
