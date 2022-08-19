@@ -5,12 +5,12 @@ from .models import Cliente, Mesa, Pedido, Produto
 
 @admin.register(Cliente)
 class ClienteAdmin (admin.ModelAdmin):
-    list_display = ['id', 'nomecliente', 'email']
+    list_display = ['id', 'nomecliente', 'email', 'senha']
 
 
 @admin.register(Produto)
 class ProdutoAdmin (admin.ModelAdmin):
-    list_display = ['id', 'nomeproduto', 'descricaoproduto', 'preco', 'linkimagem']
+    list_display = ['id', 'nomeproduto', 'descricaoproduto', 'preco', 'quantidade','linkimagem']
 
 @admin.register(Mesa)
 class MesaAdmin (admin.ModelAdmin):

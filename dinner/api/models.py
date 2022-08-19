@@ -6,11 +6,13 @@ from django.db import models
 class Cliente(models.Model):
     nomecliente = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
+    senha = models.CharField(max_length=500)
 
 class Produto(models.Model):
     nomeproduto = models.CharField(max_length=100)
     descricaoproduto = models.CharField(max_length=200)
     preco = models.FloatField()
+    quantidade = models.FloatField()
     linkimagem = models.CharField(max_length=4000)
 
 class Mesa(models.Model):

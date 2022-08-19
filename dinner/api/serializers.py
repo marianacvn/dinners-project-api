@@ -6,13 +6,13 @@ from .models import Cliente, Mesa, Pedido, Produto
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cliente
-        fields = ['id', 'nomecliente', 'email']
+        fields = ['id', 'nomecliente', 'email', 'senha']
 
 
 class ProdutoSerializer (serializers.ModelSerializer):
     class Meta:
         model = Produto
-        fields = ['id', 'nomeproduto', 'descricaoproduto', 'preco', 'linkimagem']
+        fields = ['id', 'nomeproduto', 'descricaoproduto', 'preco', 'quantidade','linkimagem']
 
 class MesaSerialize(serializers.ModelSerializer):
     class Meta:
